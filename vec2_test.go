@@ -18,33 +18,33 @@ func TestVec2_BasicMath(t *testing.T) {
 	}{
 		{
 			name:    "pos",
-			input:   NewVec2(5, 10),
-			operand: NewVec2(2, 3),
+			input:   Vec2{5, 10},
+			operand: Vec2{2, 3},
 			//
-			wantAdd: NewVec2(7, 13),
-			wantSub: NewVec2(3, 7),
-			wantMul: NewVec2(10, 30),
-			wantDiv: NewVec2(2.5, 3.3333333),
+			wantAdd: Vec2{7, 13},
+			wantSub: Vec2{3, 7},
+			wantMul: Vec2{10, 30},
+			wantDiv: Vec2{2.5, 3.3333333},
 		},
 		{
 			name:    "neg",
-			input:   NewVec2(-5, -10),
-			operand: NewVec2(-2, -3),
+			input:   Vec2{-5, -10},
+			operand: Vec2{-2, -3},
 			//
-			wantAdd: NewVec2(-7, -13),
-			wantSub: NewVec2(-3, -7),
-			wantMul: NewVec2(10, 30),
-			wantDiv: NewVec2(2.5, 3.3333333),
+			wantAdd: Vec2{-7, -13},
+			wantSub: Vec2{-3, -7},
+			wantMul: Vec2{10, 30},
+			wantDiv: Vec2{2.5, 3.3333333},
 		},
 		{
 			name:    "cross",
-			input:   NewVec2(-5, 10),
-			operand: NewVec2(2, -3),
+			input:   Vec2{-5, 10},
+			operand: Vec2{2, -3},
 			//
-			wantAdd: NewVec2(-3, 7),
-			wantSub: NewVec2(-7, 13),
-			wantMul: NewVec2(-10, -30),
-			wantDiv: NewVec2(-2.5, -3.3333333),
+			wantAdd: Vec2{-3, 7},
+			wantSub: Vec2{-7, 13},
+			wantMul: Vec2{-10, -30},
+			wantDiv: Vec2{-2.5, -3.3333333},
 		},
 	}
 	for _, tt := range tests {

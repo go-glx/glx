@@ -13,15 +13,6 @@ type Vec4 struct {
 	X, Y, Z, R float32
 }
 
-func NewVec4(x, y, z, r float32) Vec4 {
-	return Vec4{
-		X: x,
-		Y: y,
-		Z: z,
-		R: r,
-	}
-}
-
 func (v *Vec4) String() string {
 	return fmt.Sprintf("V4[%.3f, %.3f, %.3f, %.3f]", v.X, v.Y, v.Z, v.R)
 }
