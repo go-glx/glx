@@ -6,8 +6,8 @@ import (
 )
 
 // SizeOfVec3 its size for low precision memory data dump (float32)
-// dump have size of 8 bytes (x=4 + y=4 + z=4)
-const SizeOfVec3 = 12
+// dump have size of 12 bytes (x=4 + y=4 + z=4)
+const SizeOfVec3 = SizeOfVec1 * 3
 
 type Vec3 struct {
 	X, Y, Z float32

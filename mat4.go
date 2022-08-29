@@ -14,7 +14,7 @@ type Mat4 struct {
 	D Vec4
 }
 
-func NewMat4Identity() Mat4 {
+func Mat4Identity() Mat4 {
 	return Mat4{
 		A: Vec4{1, 0, 0, 0},
 		B: Vec4{0, 1, 0, 0},
@@ -30,10 +30,10 @@ func (v *Mat4) String() string {
      %0.2f, %0.2f, %0.2f, %0.2f,
      %0.2f, %0.2f, %0.2f, %0.2f,
 ]`,
-		v.A.X, v.A.Y, v.A.Z, v.A.R,
-		v.B.X, v.B.Y, v.B.Z, v.B.R,
-		v.C.X, v.C.Y, v.C.Z, v.C.R,
-		v.D.X, v.D.Y, v.D.Z, v.D.R,
+		v.A.X, v.A.Y, v.A.Z, v.A.W,
+		v.B.X, v.B.Y, v.B.Z, v.B.W,
+		v.C.X, v.C.Y, v.C.Z, v.C.W,
+		v.D.X, v.D.Y, v.D.Z, v.D.W,
 	)
 }
 
