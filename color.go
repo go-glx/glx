@@ -26,8 +26,9 @@ func ColorFromRGBA(r, g, b, a uint8) Color {
 
 // ColorFromHex just cast uint32 (hex) to color type
 // is alias for cast:
-//   c := glx.Color(0xff0000ff)
-//   c := glx.ColorFromHex(0xff0000ff)
+//
+//	c := glx.Color(0xff0000ff)
+//	c := glx.ColorFromHex(0xff0000ff)
 func ColorFromHex(hex uint32) Color {
 	return Color(hex)
 }
@@ -60,4 +61,13 @@ func (c Color) Split() (r uint8, g uint8, b uint8, a uint8) {
 	bytes := make([]byte, 4)
 	binary.LittleEndian.PutUint32(bytes, uint32(c))
 	return bytes[3], bytes[2], bytes[1], bytes[0]
+}
+
+// SplitRGB will decode hex to 3 color components
+// each component is uint8 values (0 .. 255)
+// alpha component is just ignored
+func (c Color) SplitRGB() (r uint8, g uint8, b uint8) {
+	bytes := make([]byte, 4)
+	binary.LittleEndian.PutUint32(bytes, uint32(c))
+	return bytes[3], bytes[2], bytes[1]
 }
